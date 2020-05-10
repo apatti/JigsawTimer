@@ -12,6 +12,5 @@ web-report/
 
 # macOS
 .DS_Store
-*.lock
 .workspace
 *.code-workspace
