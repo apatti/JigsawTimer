@@ -6,34 +6,6 @@ export const commonStyles = StyleSheet.create({
     justifyContent: 'center',
     flex: 1,
   },
-  topHalf: {
-    flex: 2,
-    flexDirection: 'row',
-    justifyContent: 'center',
-    alignItems:'center'
-  },
-  leftArea:{
-    flex:1,
-    flexDirection: 'row',
-    justifyContent: 'center',
-    alignItems: 'center',
-    alignSelf: 'flex-end',
-    transform:[{ rotate: "-90deg" }]
-  },
-  rightArea:{
-    flex:1,
-    flexDirection: 'row',
-    justifyContent: 'center',
-    alignItems: 'center',
-    alignSelf: 'flex-end',
-    transform:[{ rotate: "90deg" }]
-  },
-  middleArea:{
-    flex:1,
-    flexDirection: 'column',
-    justifyContent: 'center',
-    alignItems: 'flex-end'
-  },
   startButton:{
     alignSelf:'center',
     justifyContent:'center',
@@ -52,5 +24,53 @@ export const commonStyles = StyleSheet.create({
   },
   normalText:{
       paddingRight:10
+  },
+  startTimeText:{
+    fontSize: 180
+  },
+  timeText:{
+    alignSelf:'center',
+    fontSize: 125
+  },
+  roundText:{
+    alignSelf:'center',
+    fontSize: 100,
+    padding:10
+  },
+  TimeContainer:{
+    flex:1,
+    justifyContent:'center',
+    alignSelf:'center'
+  },
+  ClockContainer:{
+    flex:1,
+    justifyContent:'space-evenly',
+    alignSelf:'stretch'
+  },
+  RoundContainer:{
+    flex:1,
+    justifyContent:'center',
+    alignSelf:'center'
+  },
+  PauseEndButtons:{
+    flexDirection:'row',
+    justifyContent:'space-around'
+  },
+  RoundButton:{
+    width: 200,
+    backgroundColor:'green'
+  },
+  PauseButton:{
+    backgroundColor:'yellow',
+    width: 100
+  },
+  EndButton:{
+    backgroundColor:"red",
+    width: 100
+  },
+  SummaryContainer:{
+    flex:1,
+    justifyContent:'space-evenly',
+    alignSelf:'stretch'
   }
 });

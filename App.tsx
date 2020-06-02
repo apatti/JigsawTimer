@@ -6,11 +6,13 @@ import { EMOMTab } from "./components/EmomTab";
 import { TimerTab } from "./components/TimerTab";
 import { TabataTab } from "./components/TabataTab";
 import { Summary } from "./components/Summary";
+
 import { NavigationContainer } from '@react-navigation/native';
 
 const Tab = createMaterialTopTabNavigator();
 
 export default function App() {
+  console.ignoredYellowBox = ['Failed prop type: Invalid props.style'];
   return (
     <NavigationContainer>
       <Tab.Navigator 
@@ -23,20 +25,21 @@ export default function App() {
       >
         <Tab.Screen name="ClockTab" 
           component={ClockTab} 
-          options={{title:'Clock'}}/>
+          options={{tabBarLabel:'Clock'}}/>
         <Tab.Screen name="EMOMTab" 
           component={EMOMTab}
-          options={{title:'EMOM'}}/>
+          options={{tabBarLabel:'EMOM'}}/>
         <Tab.Screen name="TimerTab" 
           component={TimerTab} 
-          options={{title:'Timer'}}/>
+          options={{tabBarLabel:'Timer'}}/>
         <Tab.Screen name="Tabata"
           component={TabataTab} 
-          options={{title:'Tabata'}} />
+          options={{tabBarLabel:'Tabata'}} />
         <Tab.Screen 
           name="SummaryTab" 
           component={Summary} 
-          options={{title:'Summary'}}/>
+          options={{tabBarLabel:'Summary'}}
+          initialParams={{roundTimeMap:{}}}/>
       </Tab.Navigator>
     </NavigationContainer>
   );
